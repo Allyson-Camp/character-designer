@@ -48,3 +48,63 @@ Stretch Ideas for fun:
 - Wrap the catchphrase input and button in a form tag and use a 'submit' handler with the new FormData() constructor to get data from the input. (Hint: Look up e.preventDefault() and why it's useful in this case)
 - Use a radio button (probably the most challenging form input) to change between 'cartoon mode' and 'photo mode'. Load a different set of images (photo of duck vs cartoon duck, etc) depending on the mode.
 - In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
+
+my plan:
+## html setup
+    **html can either change or show the state
+    3 dropdown menus
+    Why? Let the user select different options
+    Why? To find out what the user selected
+    How? `selectEl.value`
+    Slogan Input field <input>
+    Why? To put in their slogan
+    Why? To find out what the user typed
+    How? `inputEl.value`
+    Why? Track a list of all the users slogans
+    How? ‘myArray = [ ]
+    myArray.push(‘inputEl.value`)
+    Push in the value of the inut el to the array
+    Submit button <button>
+    Why? To submit what is put in the input
+    How? buttonEl.addEventListener(`click`, () =>{});
+    3 places for photos to go <img />
+    Why? Showing users selections visually (from the state)
+    How? `imgEl.src = someImgUrl`
+    Div for slogans <div> (purple squiggles)
+    <p> within 
+    Why? To list the slogans (from the state)
+    How?? TO BE CONTINUED..
+
+    ##state
+    Waterfront/first photo option
+    Skyline/second photo option
+    Park/third photo option
+    List of slogans
+
+    ##slices of work / distinct features
+    3 dropdowns change state and update images
+    Need to build one  dropdown at a time in HTML w/ ids/values
+    Then grab that dropdown in app.js
+    Then add a change event listener to dropdown
+    In the change listener need to figure out what the user selected
+    Finally use the user selection to change to a matching image
+    Keep track of every time each dropdown has been changed, display on page
+    1 at a time
+    Should have already done event listener
+    We need count to go up over time, add some state for the count(start at 0)
+    In event listener we increment nameOfPlaceCount
+    After we increment it we display it on the sire
+    Grab html
+    Change its textContent
+    We track list of what user typed and display that list
+    Need to initialize slogans state as an empty array
+    Need to add input element and button to the HTML
+    Grab the input el and button el in app.js
+    Add eventlistener to the button
+    on click we need to figure out what the user typed
+    Take what the user typed and put it into the state array
+    Finally, add the slogan to the DOM
+    For now add the most recent slogan to the DOM
+    Function `createElement(‘p’) that will create a <p> for us
+    Another function myParentEl.append(myChildEl` will inject myChild El into the parentEl
+    How put elements into DOM so user can see them
