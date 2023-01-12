@@ -139,3 +139,14 @@ main {
     font-family: cursive;
     text-align: center;
 }
+
+h1 {
+    font-size: 50px;
+    font-family: cursive;
+    color: #595ef5bf;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+
